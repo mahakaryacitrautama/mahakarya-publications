@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Mahakarya Publications</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,8 +18,12 @@
       font-family:'Poppins',sans-serif;
     }
 
+    html{
+      scroll-behavior:smooth;
+    }
+
     body{
-      background:#f6fbff;
+      background:#f8fbff;
       color:#1e293b;
       overflow-x:hidden;
     }
@@ -29,7 +34,7 @@
 
     .navbar{
       width:100%;
-      padding:20px 8%;
+      padding:22px 8%;
       display:flex;
       justify-content:space-between;
       align-items:center;
@@ -37,7 +42,7 @@
       top:0;
       z-index:1000;
       background:rgba(255,255,255,0.85);
-      backdrop-filter:blur(14px);
+      backdrop-filter:blur(16px);
       border-bottom:1px solid rgba(0,0,0,0.05);
     }
 
@@ -49,7 +54,7 @@
 
     .nav-links{
       display:flex;
-      gap:30px;
+      gap:35px;
     }
 
     .nav-links a{
@@ -68,32 +73,35 @@
       align-items:center;
       justify-content:center;
       text-align:center;
-      padding:140px 20px 100px;
+      padding:150px 20px 100px;
+
       background:
       radial-gradient(circle at top left,#bfdbfe,transparent 30%),
       radial-gradient(circle at bottom right,#fde68a,transparent 35%),
-      #f8fbff;
+      linear-gradient(to bottom,#f8fbff,#eef6ff);
     }
 
     .hero-content{
-      max-width:950px;
+      max-width:980px;
     }
 
     .badge{
       display:inline-block;
-      padding:10px 20px;
+      padding:12px 22px;
+      border-radius:999px;
       background:#dbeafe;
       color:#2563eb;
-      border-radius:999px;
       font-weight:600;
-      margin-bottom:25px;
+      margin-bottom:28px;
+      font-size:14px;
     }
 
     .hero h1{
-      font-size:72px;
+      font-size:76px;
       line-height:1.1;
       margin-bottom:25px;
       color:#0f172a;
+      font-weight:800;
     }
 
     .hero h1 span{
@@ -102,9 +110,9 @@
 
     .hero p{
       font-size:20px;
-      color:#475569;
       line-height:1.9;
-      margin-bottom:40px;
+      color:#475569;
+      margin-bottom:45px;
     }
 
     .hero-buttons{
@@ -115,8 +123,8 @@
     }
 
     .btn{
-      padding:16px 30px;
-      border-radius:14px;
+      padding:16px 32px;
+      border-radius:16px;
       font-weight:600;
       transition:0.3s;
     }
@@ -124,7 +132,7 @@
     .btn-primary{
       background:#2563eb;
       color:white;
-      box-shadow:0 10px 30px rgba(37,99,235,0.2);
+      box-shadow:0 15px 40px rgba(37,99,235,0.25);
     }
 
     .btn-primary:hover{
@@ -134,8 +142,8 @@
 
     .btn-secondary{
       background:white;
+      border:1px solid #dbe2ea;
       color:#1e293b;
-      border:1px solid #cbd5e1;
     }
 
     .btn-secondary:hover{
@@ -148,21 +156,22 @@
       width:90%;
       max-width:1300px;
       margin:auto;
-      padding:100px 0;
+      padding:110px 0;
     }
 
     .section-title{
+      font-size:48px;
       text-align:center;
-      font-size:44px;
-      margin-bottom:15px;
+      margin-bottom:18px;
       color:#0f172a;
     }
 
     .section-subtitle{
       text-align:center;
       color:#64748b;
-      margin-bottom:60px;
       font-size:18px;
+      margin-bottom:70px;
+      line-height:1.8;
     }
 
     .grid{
@@ -173,71 +182,104 @@
 
     .card{
       background:white;
-      padding:35px;
-      border-radius:24px;
+      border-radius:28px;
+      padding:38px;
       border:1px solid #e2e8f0;
-      box-shadow:0 10px 30px rgba(0,0,0,0.04);
       transition:0.4s;
+      box-shadow:0 10px 35px rgba(0,0,0,0.04);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .card::before{
+      content:'';
+      position:absolute;
+      width:180px;
+      height:180px;
+      background:#dbeafe;
+      border-radius:50%;
+      top:-90px;
+      right:-90px;
     }
 
     .card:hover{
       transform:translateY(-8px);
-      box-shadow:0 20px 50px rgba(37,99,235,0.12);
+      box-shadow:0 20px 60px rgba(37,99,235,0.15);
     }
 
     .card h3{
       font-size:28px;
-      margin-bottom:15px;
+      margin-bottom:18px;
       color:#0f172a;
+      position:relative;
+      z-index:2;
     }
 
     .card p{
+      line-height:1.9;
       color:#475569;
-      line-height:1.8;
-      margin-bottom:25px;
+      margin-bottom:28px;
+      position:relative;
+      z-index:2;
+    }
+
+    .card a{
+      display:inline-block;
+      padding:12px 22px;
+      border-radius:12px;
+      background:#2563eb;
+      color:white;
+      font-weight:600;
+      transition:0.3s;
+      position:relative;
+      z-index:2;
+    }
+
+    .card a:hover{
+      background:#1d4ed8;
     }
 
     .coming-soon{
-      margin-top:100px;
-      background:linear-gradient(135deg,#2563eb,#3b82f6);
-      padding:70px 40px;
-      border-radius:30px;
-      color:white;
+      margin-top:110px;
+      padding:80px 40px;
+      border-radius:36px;
       text-align:center;
-      box-shadow:0 20px 60px rgba(37,99,235,0.2);
+      background:linear-gradient(135deg,#2563eb,#3b82f6);
+      color:white;
+      box-shadow:0 25px 70px rgba(37,99,235,0.2);
     }
 
     .coming-soon h2{
-      font-size:52px;
+      font-size:56px;
       margin-bottom:20px;
     }
 
     .coming-soon p{
+      max-width:850px;
+      margin:auto;
       font-size:18px;
       line-height:1.9;
-      max-width:800px;
-      margin:auto;
-      opacity:0.95;
+      opacity:0.96;
     }
 
     .stats{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
       gap:25px;
-      margin-top:80px;
+      margin-top:90px;
     }
 
     .stat-box{
       background:white;
-      padding:35px;
       border-radius:24px;
+      padding:40px;
       text-align:center;
       border:1px solid #e2e8f0;
       box-shadow:0 10px 30px rgba(0,0,0,0.03);
     }
 
     .stat-box h2{
-      font-size:42px;
+      font-size:46px;
       color:#2563eb;
       margin-bottom:10px;
     }
@@ -249,11 +291,12 @@
 
     footer{
       margin-top:100px;
-      padding:40px 20px;
+      padding:45px 20px;
       text-align:center;
       color:#64748b;
       border-top:1px solid #e2e8f0;
       background:white;
+      line-height:1.8;
     }
 
     @media(max-width:768px){
@@ -271,6 +314,10 @@
       }
 
       .coming-soon h2{
+        font-size:40px;
+      }
+
+      .section-title{
         font-size:38px;
       }
 
@@ -302,19 +349,19 @@
     <div class="hero-content">
 
       <div class="badge">
-        Repositori Publikasi Akademik & Ilmiah
+        Repositori Publikasi Kesehatan & Ilmiah
       </div>
 
       <h1>
-        Menjaga Pengetahuan
-        Melalui <span>Publikasi</span>
+        Publikasi Ilmiah
+        <span>Kesehatan Modern</span>
       </h1>
 
       <p>
         Mahakarya Publications merupakan platform publikasi digital
-        yang berfokus pada buku, jurnal, dan karya ilmiah akademik
-        untuk mendukung pengembangan ilmu pengetahuan yang modern,
-        terbuka, dan mudah diakses.
+        yang berfokus pada buku, jurnal, dan karya ilmiah di bidang
+        kesehatan, keperawatan, kebidanan, farmasi, keselamatan pasien,
+        dan penelitian akademik multidisipliner.
       </p>
 
       <div class="hero-buttons">
@@ -340,41 +387,58 @@
     </h2>
 
     <p class="section-subtitle">
-      Koleksi buku, jurnal, dan publikasi ilmiah pilihan.
+      Koleksi publikasi kesehatan, jurnal ilmiah,
+      dan penelitian akademik multidisipliner.
     </p>
 
     <div class="grid">
 
       <div class="card">
 
-        <h3>Beyond Blaming</h3>
+        <h3>Keselamatan Pasien</h3>
 
         <p>
-          Model Integratif Human Reliability–K3 Dalam Keselamatan Pasien
-          dengan pendekatan multidisipliner modern.
+          Publikasi ilmiah terkait patient safety,
+          human reliability, budaya keselamatan,
+          dan pengembangan sistem pelayanan kesehatan modern.
         </p>
+
+        <a href="#">
+          Lihat Publikasi
+        </a>
 
       </div>
 
       <div class="card">
 
-        <h3>IHR-K3</h3>
+        <h3>Keperawatan Modern</h3>
 
         <p>
-          Publikasi penelitian terkait human reliability dan keselamatan kerja
-          dalam sistem pelayanan kesehatan.
+          Kumpulan penelitian dan publikasi akademik
+          di bidang keperawatan klinis, komunitas,
+          dan pengembangan pelayanan kesehatan.
         </p>
+
+        <a href="#">
+          Lihat Publikasi
+        </a>
 
       </div>
 
       <div class="card">
 
-        <h3>Healthcare Studies</h3>
+        <h3>Farmasi & Kebidanan</h3>
 
         <p>
-          Kumpulan penelitian dan publikasi ilmiah terkait keselamatan pasien
-          dan pengembangan sistem kesehatan modern.
+          Publikasi ilmiah terkait farmasi klinis,
+          pelayanan kesehatan ibu,
+          kebidanan modern,
+          dan kesehatan masyarakat.
         </p>
+
+        <a href="#">
+          Lihat Publikasi
+        </a>
 
       </div>
 
@@ -385,9 +449,11 @@
       <h2>Coming Soon 🚀</h2>
 
       <p>
-        Website ini sedang dikembangkan untuk menghadirkan sistem publikasi digital
-        yang lebih modern dan terintegrasi, termasuk katalog publikasi,
-        akses jurnal ilmiah, repository penelitian, dan sistem arsip akademik.
+        Sistem repository digital ini sedang dikembangkan
+        untuk mendukung publikasi buku kesehatan,
+        jurnal ilmiah, repository penelitian,
+        katalog publikasi digital,
+        dan pengarsipan akademik modern yang lebih terintegrasi.
       </p>
 
     </div>
@@ -396,7 +462,7 @@
 
       <div class="stat-box">
         <h2>10+</h2>
-        <p>Buku</p>
+        <p>Buku Kesehatan</p>
       </div>
 
       <div class="stat-box">
@@ -406,12 +472,12 @@
 
       <div class="stat-box">
         <h2>5+</h2>
-        <p>Jurnal</p>
+        <p>Jurnal Akademik</p>
       </div>
 
       <div class="stat-box">
         <h2>2026</h2>
-        <p>Didirikan</p>
+        <p>Mulai Dibangun</p>
       </div>
 
     </div>
@@ -419,7 +485,16 @@
   </section>
 
   <footer>
+
     © 2026 Mahakarya Publications — All Rights Reserved
+
+    <br><br>
+
+    Platform publikasi digital untuk mendukung
+    pengembangan ilmu kesehatan,
+    penelitian akademik,
+    dan akses pengetahuan modern.
+
   </footer>
 
 </body>
