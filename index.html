@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Mahakarya Publications</title>
 
@@ -41,8 +42,8 @@
       position:fixed;
       top:0;
       z-index:1000;
-      background:rgba(255,255,255,0.85);
-      backdrop-filter:blur(16px);
+      background:rgba(255,255,255,0.88);
+      backdrop-filter:blur(14px);
       border-bottom:1px solid rgba(0,0,0,0.05);
     }
 
@@ -54,13 +55,15 @@
 
     .nav-links{
       display:flex;
-      gap:35px;
+      gap:28px;
+      flex-wrap:wrap;
     }
 
     .nav-links a{
       color:#475569;
       font-weight:500;
       transition:0.3s;
+      font-size:15px;
     }
 
     .nav-links a:hover{
@@ -70,10 +73,10 @@
     .hero{
       min-height:100vh;
       display:flex;
-      align-items:center;
       justify-content:center;
+      align-items:center;
       text-align:center;
-      padding:150px 20px 100px;
+      padding:160px 20px 100px;
 
       background:
       radial-gradient(circle at top left,#bfdbfe,transparent 30%),
@@ -87,20 +90,20 @@
 
     .badge{
       display:inline-block;
-      padding:12px 22px;
+      padding:12px 24px;
       border-radius:999px;
       background:#dbeafe;
       color:#2563eb;
+      font-size:14px;
       font-weight:600;
       margin-bottom:28px;
-      font-size:14px;
     }
 
     .hero h1{
       font-size:76px;
       line-height:1.1;
-      margin-bottom:25px;
       color:#0f172a;
+      margin-bottom:28px;
       font-weight:800;
     }
 
@@ -132,7 +135,7 @@
     .btn-primary{
       background:#2563eb;
       color:white;
-      box-shadow:0 15px 40px rgba(37,99,235,0.25);
+      box-shadow:0 15px 40px rgba(37,99,235,0.22);
     }
 
     .btn-primary:hover{
@@ -160,18 +163,18 @@
     }
 
     .section-title{
-      font-size:48px;
       text-align:center;
+      font-size:48px;
       margin-bottom:18px;
       color:#0f172a;
     }
 
     .section-subtitle{
       text-align:center;
-      color:#64748b;
       font-size:18px;
+      color:#64748b;
+      line-height:1.9;
       margin-bottom:70px;
-      line-height:1.8;
     }
 
     .grid{
@@ -182,11 +185,11 @@
 
     .card{
       background:white;
-      border-radius:28px;
       padding:38px;
+      border-radius:28px;
       border:1px solid #e2e8f0;
-      transition:0.4s;
       box-shadow:0 10px 35px rgba(0,0,0,0.04);
+      transition:0.4s;
       position:relative;
       overflow:hidden;
     }
@@ -196,15 +199,15 @@
       position:absolute;
       width:180px;
       height:180px;
-      background:#dbeafe;
       border-radius:50%;
+      background:#dbeafe;
       top:-90px;
       right:-90px;
     }
 
     .card:hover{
       transform:translateY(-8px);
-      box-shadow:0 20px 60px rgba(37,99,235,0.15);
+      box-shadow:0 20px 60px rgba(37,99,235,0.14);
     }
 
     .card h3{
@@ -216,9 +219,9 @@
     }
 
     .card p{
-      line-height:1.9;
       color:#475569;
-      margin-bottom:28px;
+      line-height:1.9;
+      margin-bottom:25px;
       position:relative;
       z-index:2;
     }
@@ -271,8 +274,8 @@
 
     .stat-box{
       background:white;
-      border-radius:24px;
       padding:40px;
+      border-radius:24px;
       text-align:center;
       border:1px solid #e2e8f0;
       box-shadow:0 10px 30px rgba(0,0,0,0.03);
@@ -291,12 +294,12 @@
 
     footer{
       margin-top:100px;
-      padding:45px 20px;
+      padding:50px 20px;
       text-align:center;
       color:#64748b;
       border-top:1px solid #e2e8f0;
       background:white;
-      line-height:1.8;
+      line-height:1.9;
     }
 
     @media(max-width:768px){
@@ -313,12 +316,12 @@
         display:none;
       }
 
-      .coming-soon h2{
-        font-size:40px;
-      }
-
       .section-title{
         font-size:38px;
+      }
+
+      .coming-soon h2{
+        font-size:40px;
       }
 
     }
@@ -336,10 +339,31 @@
     </div>
 
     <div class="nav-links">
-      <a href="#">Beranda</a>
-      <a href="#">Buku</a>
-      <a href="#">Jurnal</a>
-      <a href="#">Publikasi</a>
+
+      <a href="https://www.mahakarya.academy/" target="_blank">
+        Website Utama
+      </a>
+
+      <a href="https://www.mcubooks.com/" target="_blank">
+        Buku
+      </a>
+
+      <a href="https://journal.mahakarya.academy/index.php/journalmcu" target="_blank">
+        Jurnal
+      </a>
+
+      <a href="https://shopee.co.id/mcuofficial" target="_blank">
+        Shopee
+      </a>
+
+      <a href="https://www.instagram.com/mcu.kompeten/" target="_blank">
+        Instagram
+      </a>
+
+      <a href="https://www.youtube.com/c/MahakaryaCitraUtama" target="_blank">
+        YouTube
+      </a>
+
     </div>
 
   </nav>
@@ -366,11 +390,11 @@
 
       <div class="hero-buttons">
 
-        <a href="#" class="btn btn-primary">
-          Jelajahi Publikasi
+        <a href="https://www.mcubooks.com/" target="_blank" class="btn btn-primary">
+          Jelajahi Buku
         </a>
 
-        <a href="#" class="btn btn-secondary">
+        <a href="https://journal.mahakarya.academy/index.php/journalmcu" target="_blank" class="btn btn-secondary">
           Lihat Jurnal
         </a>
 
@@ -403,7 +427,7 @@
           dan pengembangan sistem pelayanan kesehatan modern.
         </p>
 
-        <a href="#">
+        <a href="https://journal.mahakarya.academy/index.php/journalmcu" target="_blank">
           Lihat Publikasi
         </a>
 
@@ -419,7 +443,7 @@
           dan pengembangan pelayanan kesehatan.
         </p>
 
-        <a href="#">
+        <a href="https://www.mcubooks.com/" target="_blank">
           Lihat Publikasi
         </a>
 
@@ -436,8 +460,8 @@
           dan kesehatan masyarakat.
         </p>
 
-        <a href="#">
-          Lihat Publikasi
+        <a href="https://shopee.co.id/mcuofficial" target="_blank">
+          Pembelian Buku
         </a>
 
       </div>
@@ -451,7 +475,8 @@
       <p>
         Sistem repository digital ini sedang dikembangkan
         untuk mendukung publikasi buku kesehatan,
-        jurnal ilmiah, repository penelitian,
+        jurnal ilmiah,
+        repository penelitian,
         katalog publikasi digital,
         dan pengarsipan akademik modern yang lebih terintegrasi.
       </p>
@@ -498,4 +523,5 @@
   </footer>
 
 </body>
+
 </html>
