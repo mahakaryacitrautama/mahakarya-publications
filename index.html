@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mahakarya Publications</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
 
@@ -18,7 +18,7 @@
     }
 
     body{
-      background:#f5f9ff;
+      background:#f6fbff;
       color:#1e293b;
       overflow-x:hidden;
     }
@@ -36,14 +36,14 @@
       position:fixed;
       top:0;
       z-index:1000;
-      backdrop-filter:blur(12px);
       background:rgba(255,255,255,0.85);
+      backdrop-filter:blur(14px);
       border-bottom:1px solid rgba(0,0,0,0.05);
     }
 
     .logo{
       font-size:24px;
-      font-weight:700;
+      font-weight:800;
       color:#2563eb;
     }
 
@@ -54,8 +54,8 @@
 
     .nav-links a{
       color:#475569;
-      transition:0.3s;
       font-weight:500;
+      transition:0.3s;
     }
 
     .nav-links a:hover{
@@ -68,7 +68,7 @@
       align-items:center;
       justify-content:center;
       text-align:center;
-      padding:120px 20px 80px;
+      padding:140px 20px 100px;
       background:
       radial-gradient(circle at top left,#bfdbfe,transparent 30%),
       radial-gradient(circle at bottom right,#fde68a,transparent 35%),
@@ -81,10 +81,10 @@
 
     .badge{
       display:inline-block;
-      padding:10px 18px;
-      border-radius:999px;
+      padding:10px 20px;
       background:#dbeafe;
       color:#2563eb;
+      border-radius:999px;
       font-weight:600;
       margin-bottom:25px;
     }
@@ -101,8 +101,8 @@
     }
 
     .hero p{
-      color:#475569;
       font-size:20px;
+      color:#475569;
       line-height:1.9;
       margin-bottom:40px;
     }
@@ -115,7 +115,7 @@
     }
 
     .btn{
-      padding:15px 30px;
+      padding:16px 30px;
       border-radius:14px;
       font-weight:600;
       transition:0.3s;
@@ -134,8 +134,8 @@
 
     .btn-secondary{
       background:white;
-      border:1px solid #cbd5e1;
       color:#1e293b;
+      border:1px solid #cbd5e1;
     }
 
     .btn-secondary:hover{
@@ -152,8 +152,8 @@
     }
 
     .section-title{
-      font-size:42px;
       text-align:center;
+      font-size:44px;
       margin-bottom:15px;
       color:#0f172a;
     }
@@ -173,17 +173,16 @@
 
     .card{
       background:white;
-      border-radius:24px;
       padding:35px;
+      border-radius:24px;
       border:1px solid #e2e8f0;
-      transition:0.4s;
       box-shadow:0 10px 30px rgba(0,0,0,0.04);
+      transition:0.4s;
     }
 
     .card:hover{
       transform:translateY(-8px);
       box-shadow:0 20px 50px rgba(37,99,235,0.12);
-      border-color:#93c5fd;
     }
 
     .card h3{
@@ -198,18 +197,27 @@
       margin-bottom:25px;
     }
 
-    .card a{
-      display:inline-block;
-      padding:12px 22px;
-      background:#2563eb;
+    .coming-soon{
+      margin-top:100px;
+      background:linear-gradient(135deg,#2563eb,#3b82f6);
+      padding:70px 40px;
+      border-radius:30px;
       color:white;
-      border-radius:12px;
-      font-weight:600;
-      transition:0.3s;
+      text-align:center;
+      box-shadow:0 20px 60px rgba(37,99,235,0.2);
     }
 
-    .card a:hover{
-      background:#1d4ed8;
+    .coming-soon h2{
+      font-size:52px;
+      margin-bottom:20px;
+    }
+
+    .coming-soon p{
+      font-size:18px;
+      line-height:1.9;
+      max-width:800px;
+      margin:auto;
+      opacity:0.95;
     }
 
     .stats{
@@ -221,8 +229,8 @@
 
     .stat-box{
       background:white;
-      border-radius:24px;
       padding:35px;
+      border-radius:24px;
       text-align:center;
       border:1px solid #e2e8f0;
       box-shadow:0 10px 30px rgba(0,0,0,0.03);
@@ -240,6 +248,7 @@
     }
 
     footer{
+      margin-top:100px;
       padding:40px 20px;
       text-align:center;
       color:#64748b;
@@ -261,6 +270,10 @@
         display:none;
       }
 
+      .coming-soon h2{
+        font-size:38px;
+      }
+
     }
 
   </style>
@@ -276,10 +289,10 @@
     </div>
 
     <div class="nav-links">
-      <a href="#">Home</a>
-      <a href="#">Books</a>
-      <a href="#">Journals</a>
-      <a href="#">Research</a>
+      <a href="#">Beranda</a>
+      <a href="#">Buku</a>
+      <a href="#">Jurnal</a>
+      <a href="#">Publikasi</a>
     </div>
 
   </nav>
@@ -289,28 +302,31 @@
     <div class="hero-content">
 
       <div class="badge">
-        Academic & Scientific Publication Repository
+        Repositori Publikasi Akademik & Ilmiah
       </div>
 
       <h1>
-        Preserving Knowledge Through
-        <span>Publications</span>
+        Menjaga Pengetahuan
+        Melalui <span>Publikasi</span>
       </h1>
 
       <p>
-        Digital archive for books, journals, and academic publications.
-        Built to support research dissemination, scholarly communication,
-        and accessible scientific knowledge.
+        Mahakarya Publications merupakan platform publikasi digital
+        yang berfokus pada buku, jurnal, dan karya ilmiah akademik
+        untuk mendukung pengembangan ilmu pengetahuan yang modern,
+        terbuka, dan mudah diakses.
       </p>
 
       <div class="hero-buttons">
+
         <a href="#" class="btn btn-primary">
-          Explore Publications
+          Jelajahi Publikasi
         </a>
 
         <a href="#" class="btn btn-secondary">
-          View Journals
+          Lihat Jurnal
         </a>
+
       </div>
 
     </div>
@@ -320,16 +336,17 @@
   <section class="container">
 
     <h2 class="section-title">
-      Featured Publications
+      Publikasi Unggulan
     </h2>
 
     <p class="section-subtitle">
-      Selected books, journals, and scientific research publications.
+      Koleksi buku, jurnal, dan publikasi ilmiah pilihan.
     </p>
 
     <div class="grid">
 
       <div class="card">
+
         <h3>Beyond Blaming</h3>
 
         <p>
@@ -337,36 +354,41 @@
           dengan pendekatan multidisipliner modern.
         </p>
 
-        <a href="#">
-          View Publication
-        </a>
       </div>
 
       <div class="card">
+
         <h3>IHR-K3</h3>
 
         <p>
-          Human reliability and occupational safety framework
-          research publication for healthcare systems.
+          Publikasi penelitian terkait human reliability dan keselamatan kerja
+          dalam sistem pelayanan kesehatan.
         </p>
 
-        <a href="#">
-          View Publication
-        </a>
       </div>
 
       <div class="card">
+
         <h3>Healthcare Studies</h3>
 
         <p>
-          Collection of healthcare research and scientific
-          publications related to patient safety.
+          Kumpulan penelitian dan publikasi ilmiah terkait keselamatan pasien
+          dan pengembangan sistem kesehatan modern.
         </p>
 
-        <a href="#">
-          View Publication
-        </a>
       </div>
+
+    </div>
+
+    <div class="coming-soon">
+
+      <h2>Coming Soon 🚀</h2>
+
+      <p>
+        Website ini sedang dikembangkan untuk menghadirkan sistem publikasi digital
+        yang lebih modern dan terintegrasi, termasuk katalog publikasi,
+        akses jurnal ilmiah, repository penelitian, dan sistem arsip akademik.
+      </p>
 
     </div>
 
@@ -374,22 +396,22 @@
 
       <div class="stat-box">
         <h2>10+</h2>
-        <p>Books</p>
+        <p>Buku</p>
       </div>
 
       <div class="stat-box">
         <h2>25+</h2>
-        <p>Research Papers</p>
+        <p>Artikel Ilmiah</p>
       </div>
 
       <div class="stat-box">
         <h2>5+</h2>
-        <p>Journals</p>
+        <p>Jurnal</p>
       </div>
 
       <div class="stat-box">
         <h2>2026</h2>
-        <p>Established</p>
+        <p>Didirikan</p>
       </div>
 
     </div>
