@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mahakarya Publications</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      background:#f5f9ff;
+      color:#1e293b;
+      overflow-x:hidden;
+    }
+
+    a{
+      text-decoration:none;
+    }
+
+    .navbar{
+      width:100%;
+      padding:20px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:fixed;
+      top:0;
+      z-index:1000;
+      backdrop-filter:blur(12px);
+      background:rgba(255,255,255,0.85);
+      border-bottom:1px solid rgba(0,0,0,0.05);
+    }
+
+    .logo{
+      font-size:24px;
+      font-weight:700;
+      color:#2563eb;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:30px;
+    }
+
+    .nav-links a{
+      color:#475569;
+      transition:0.3s;
+      font-weight:500;
+    }
+
+    .nav-links a:hover{
+      color:#2563eb;
+    }
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:120px 20px 80px;
+      background:
+      radial-gradient(circle at top left,#bfdbfe,transparent 30%),
+      radial-gradient(circle at bottom right,#fde68a,transparent 35%),
+      #f8fbff;
+    }
+
+    .hero-content{
+      max-width:950px;
+    }
+
+    .badge{
+      display:inline-block;
+      padding:10px 18px;
+      border-radius:999px;
+      background:#dbeafe;
+      color:#2563eb;
+      font-weight:600;
+      margin-bottom:25px;
+    }
+
+    .hero h1{
+      font-size:72px;
+      line-height:1.1;
+      margin-bottom:25px;
+      color:#0f172a;
+    }
+
+    .hero h1 span{
+      color:#2563eb;
+    }
+
+    .hero p{
+      color:#475569;
+      font-size:20px;
+      line-height:1.9;
+      margin-bottom:40px;
+    }
+
+    .hero-buttons{
+      display:flex;
+      justify-content:center;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      padding:15px 30px;
+      border-radius:14px;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    .btn-primary{
+      background:#2563eb;
+      color:white;
+      box-shadow:0 10px 30px rgba(37,99,235,0.2);
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-5px);
+      background:#1d4ed8;
+    }
+
+    .btn-secondary{
+      background:white;
+      border:1px solid #cbd5e1;
+      color:#1e293b;
+    }
+
+    .btn-secondary:hover{
+      transform:translateY(-5px);
+      border-color:#2563eb;
+      color:#2563eb;
+    }
+
+    .container{
+      width:90%;
+      max-width:1300px;
+      margin:auto;
+      padding:100px 0;
+    }
+
+    .section-title{
+      font-size:42px;
+      text-align:center;
+      margin-bottom:15px;
+      color:#0f172a;
+    }
+
+    .section-subtitle{
+      text-align:center;
+      color:#64748b;
+      margin-bottom:60px;
+      font-size:18px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:white;
+      border-radius:24px;
+      padding:35px;
+      border:1px solid #e2e8f0;
+      transition:0.4s;
+      box-shadow:0 10px 30px rgba(0,0,0,0.04);
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+      box-shadow:0 20px 50px rgba(37,99,235,0.12);
+      border-color:#93c5fd;
+    }
+
+    .card h3{
+      font-size:28px;
+      margin-bottom:15px;
+      color:#0f172a;
+    }
+
+    .card p{
+      color:#475569;
+      line-height:1.8;
+      margin-bottom:25px;
+    }
+
+    .card a{
+      display:inline-block;
+      padding:12px 22px;
+      background:#2563eb;
+      color:white;
+      border-radius:12px;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    .card a:hover{
+      background:#1d4ed8;
+    }
+
+    .stats{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:25px;
+      margin-top:80px;
+    }
+
+    .stat-box{
+      background:white;
+      border-radius:24px;
+      padding:35px;
+      text-align:center;
+      border:1px solid #e2e8f0;
+      box-shadow:0 10px 30px rgba(0,0,0,0.03);
+    }
+
+    .stat-box h2{
+      font-size:42px;
+      color:#2563eb;
+      margin-bottom:10px;
+    }
+
+    .stat-box p{
+      color:#64748b;
+      font-weight:500;
+    }
+
+    footer{
+      padding:40px 20px;
+      text-align:center;
+      color:#64748b;
+      border-top:1px solid #e2e8f0;
+      background:white;
+    }
+
+    @media(max-width:768px){
+
+      .hero h1{
+        font-size:48px;
+      }
+
+      .hero p{
+        font-size:16px;
+      }
+
+      .nav-links{
+        display:none;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <nav class="navbar">
+
+    <div class="logo">
+      Mahakarya Publications
+    </div>
+
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Books</a>
+      <a href="#">Journals</a>
+      <a href="#">Research</a>
+    </div>
+
+  </nav>
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <div class="badge">
+        Academic & Scientific Publication Repository
+      </div>
+
+      <h1>
+        Preserving Knowledge Through
+        <span>Publications</span>
+      </h1>
+
+      <p>
+        Digital archive for books, journals, and academic publications.
+        Built to support research dissemination, scholarly communication,
+        and accessible scientific knowledge.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#" class="btn btn-primary">
+          Explore Publications
+        </a>
+
+        <a href="#" class="btn btn-secondary">
+          View Journals
+        </a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="container">
+
+    <h2 class="section-title">
+      Featured Publications
+    </h2>
+
+    <p class="section-subtitle">
+      Selected books, journals, and scientific research publications.
+    </p>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>Beyond Blaming</h3>
+
+        <p>
+          Model Integratif Human Reliability–K3 Dalam Keselamatan Pasien
+          dengan pendekatan multidisipliner modern.
+        </p>
+
+        <a href="#">
+          View Publication
+        </a>
+      </div>
+
+      <div class="card">
+        <h3>IHR-K3</h3>
+
+        <p>
+          Human reliability and occupational safety framework
+          research publication for healthcare systems.
+        </p>
+
+        <a href="#">
+          View Publication
+        </a>
+      </div>
+
+      <div class="card">
+        <h3>Healthcare Studies</h3>
+
+        <p>
+          Collection of healthcare research and scientific
+          publications related to patient safety.
+        </p>
+
+        <a href="#">
+          View Publication
+        </a>
+      </div>
+
+    </div>
+
+    <div class="stats">
+
+      <div class="stat-box">
+        <h2>10+</h2>
+        <p>Books</p>
+      </div>
+
+      <div class="stat-box">
+        <h2>25+</h2>
+        <p>Research Papers</p>
+      </div>
+
+      <div class="stat-box">
+        <h2>5+</h2>
+        <p>Journals</p>
+      </div>
+
+      <div class="stat-box">
+        <h2>2026</h2>
+        <p>Established</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <footer>
+    © 2026 Mahakarya Publications — All Rights Reserved
+  </footer>
+
+</body>
+</html>
